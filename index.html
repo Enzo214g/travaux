@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MMI  -  Durville Enzo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mmi: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            accent: '#6366f1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.15);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #6366f1 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP NAV BAR (Sans bouton) -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand / Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-sky-500/20">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-lg tracking-tight gradient-text">MMI PORTFOLIO</span>
+                        <span class="hidden sm:inline-block text-xs text-gray-400 bg-gray-800/80 px-2 py-0.5 rounded-full ml-2 border border-gray-700">BUT MMI S3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WORKSPACE CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full flex-grow space-y-10">
+
+        <!-- STUDENT PROFILE HERO BANNER (Sans bouton) -->
+        <section class="relative rounded-3xl overflow-hidden glass-panel p-8 sm:p-10 border border-gray-800 shadow-2xl">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+                    <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-sky-400 via-indigo-500 to-purple-600 p-0.5 shadow-xl flex-shrink-0">
+                        <div class="w-full h-full bg-gray-900 rounded-[14px] flex items-center justify-center text-3xl font-extrabold text-white">
+                            DE
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">DURVILLE Enzo</h1>
+                            <span class="bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-graduate"></i> TP A
+                            </span>
+                        </div>
+                        <p class="text-gray-300 text-base max-w-2xl leading-relaxed">
+                            Étudiant en Semestre 3 des Métiers du Multimédia et de l'Internet (MMI) à Troyes. Retrouvez l'ensemble de mes travaux pratiques, projets web et réalisations intégrés en HTML, CSS et JS.
+                        </p>
+                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-2 text-xs text-gray-400">
+                            <span><i class="fa-solid fa-school text-sky-400 mr-1"></i> IUT de Troyes</span>
+                            <span><i class="fa-solid fa-laptop-code text-indigo-400 mr-1"></i> HTML / CSS / JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTIONS DE PRÉSENTATION DES MODULES S3 -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- 1. DEV WEB -->
+            <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-xl mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Développement Web</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Intégration de pages web , scripts JavaScriptet structures de données.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 2. DESIGN & UX/UI -->
+            <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl mb-4">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Design & UX/UI</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Conception d'interfaces utilisateurs ergonomiques, chartes graphiques et intégration en CSS pur ou frameworks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. COMMUNICATION & AUDIOVISUEL -->
+            <div class="glass-card p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl mb-4">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Communication & Audiovisuel</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Stratégies de communication numérique, production de contenus multimédias et hébergement de projets.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BLOC EN BAS : TRAVAUX S3 AVEC MENU DÉROULANT UNIQUE -->
+        <section id="travaux-s3" class="glass-panel p-8 sm:p-10 rounded-3xl border border-gray-800 shadow-2xl relative overflow-visible">
+            <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                <div class="space-y-2 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold">
+                        <i class="fa-solid fa-sitemap"></i> S3
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Travaux S3</h2>
+                    <p class="text-gray-400 text-sm max-w-xl">
+                        Sélectionnez un TP dans le menu déroulant ci-contre pour y accéder.
+                    </p>
+                </div>
+
+                <!-- Bouton avec Menu Déroulant unique -->
+                <div class="relative w-full md:w-auto flex-shrink-0">
+                    <button onclick="toggleBottomDropdown()" class="w-full md:w-auto bg-gradient-to-r from-indigo-600 to-sky-500 hover:from-indigo-500 hover:to-sky-400 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3 transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <span>Mes travaux S3</span>
+                        <i class="fa-solid fa-chevron-down text-xs ml-1" id="bottomDropdownChevron"></i>
+                    </button>
+
+                    <!-- Menu Déroulant -->
+                    <div id="bottomDropdown" class="hidden absolute right-0 bottom-full mb-3 w-80 glass-panel rounded-2xl shadow-2xl border border-gray-800 py-2 z-50 text-left animate-in fade-in slide-in-from-bottom-2 duration-150">
+                        <div class="px-3 py-2 text-[10px] font-bold text-gray-400 uppercase tracking-wider border-b border-gray-800/60 mb-1">
+                            Tous les Travaux S3
+                        </div>
+                        
+                        <a href="travaux/index.html" class="flex items-center justify-between px-3 py-2.5 mx-1 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 text-xs font-medium transition border border-sky-500/20">
+                            <span class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-star text-amber-400"></i>
+                                <span class="font-semibold">TP Toy Story</span>
+                            </span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+
+                        <div class="my-1 border-t border-gray-800/60"></div>
+
+                        <a href="travaux/tp1-integration/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-brands fa-html5 text-orange-400"></i> TP 2</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+
+                        <a href="travaux/tp2-javascript/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-brands fa-js text-yellow-400"></i> TP 3</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+
+                        <a href="travaux/projet-design-ui/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-solid fa-palette text-pink-400"></i> TP 4</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+
+                        <a href="travaux/tp-charte-graphique/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-solid fa-swatchbook text-indigo-400"></i> TP 5</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+
+                        <a href="travaux/tp3-php-bdd/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-solid fa-database text-purple-400"></i> TP 6</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+
+                        <a href="travaux/projet-audiovisuel/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-solid fa-video text-emerald-400"></i> TP 7</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+
+                        <a href="travaux/tp-comm-digitale/index.html" class="flex items-center justify-between px-3 py-2 mx-1 rounded-xl hover:bg-gray-800 text-gray-300 text-xs transition">
+                            <span class="flex items-center gap-2.5"><i class="fa-solid fa-hashtag text-cyan-400"></i> TP 8</span>
+                            <span class="text-[10px] text-gray-500">TP</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 glass-panel py-6 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div>
+                <span class="font-semibold text-gray-300">Portfolio MMI S3</span> — Fait par [Votre Prénom] [Votre Nom]
+            </div>
+            <div>
+                <span>IUT de Troyes</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JS GESTION DU MENU DÉROULANT DU BAS -->
+    <script>
+        // Toggle menu déroulant Bloc Bas "Travaux S3"
+        function toggleBottomDropdown() {
+            const dropdown = document.getElementById('bottomDropdown');
+            const chevron = document.getElementById('bottomDropdownChevron');
+            const isHidden = dropdown.classList.contains('hidden');
+            
+            dropdown.classList.toggle('hidden');
+            chevron.className = isHidden 
+                ? "fa-solid fa-chevron-up text-xs ml-1" 
+                : "fa-solid fa-chevron-down text-xs ml-1";
+        }
+
+        // Fermer le menu au clic à l'extérieur
+        document.addEventListener('click', function(event) {
+            const bottomDropdown = document.getElementById('bottomDropdown');
+            
+            if (!event.target.closest('#bottomDropdown') && !event.target.closest('button[onclick="toggleBottomDropdown()"]')) {
+                if (!bottomDropdown.classList.contains('hidden')) {
+                    bottomDropdown.classList.add('hidden');
+                    document.getElementById('bottomDropdownChevron').className = "fa-solid fa-chevron-down text-xs ml-1";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
